@@ -1,0 +1,37 @@
+/*
+ * Common configurations for OSGi projects
+ */
+apply plugin: 'bas-osgi'
+apply from: "$project.rootDir/settings/java-base.gradle"
+apply from: "$project.rootDir/settings/coins.gradle"
+apply from: "$project.rootDir/settings/l10n.gradle"
+
+// Common OSGi manifest instructions
+jar {
+	manifest {
+		docURL                          = 'http://www.softwareag.com'
+		instruction '-nouses'           , 'true'
+		instruction '-versionpolicy'    , '[${version;==;${@}},${version;+;${@}})' // Consumer Importer Policy
+	}
+}
+// Common OSGi dependencies
+dependencies {
+	providedCompile(
+		modules.osgi,
+	)
+	testCompile(
+		modules.junit,
+	)
+}
+
+// Generating Eclipse workspace files for PDE projects
+apply from: "$project.rootDir/settings/ide-eclipse-pde.gradle"
+
+// Generating IDEA workspace files
+apply from: "$project.rootDir/settings/ide-idea.gradle"
+
+// TODO :: Bnd requires at least an empty classes dir. This can be removed after adding sources to this template
+task setup << {
+	sourceSets.main.output.classesDir.mkdirs()
+}
+tasks.jar.dependsOn tasks.setup

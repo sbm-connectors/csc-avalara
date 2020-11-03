@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_nsName">wmavalara.avaTax_v15_4.tax.doctypes:docTypeRef_tns_GetTaxResult</value>
+    <value name="node_pkg">WmAvalaraAvaTaxProvider</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="field_min">1</value>
+    <value name="field_max">1</value>
+    <value name="field_enhanced">true</value>
+    <value name="field_is_attribute">false</value>
+    <value name="field_is_text">false</value>
+    <value name="field_is_xml_content">false</value>
+    <value name="any_mode">0</value>
+    <value name="any_mode_uris"></value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TransactionId</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:ResultCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://avatax.avalara.com/services</value>
+              <value name="ncName">SeverityLevel</value>
+            </record>
+          </array>
+          <value name="schemaDomain">com.softwareag.cloudstreams.avalara.avaTax_v15.4#TaxSvc</value>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:Messages</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="modelType">1</value>
+        <value name="preserveText">false</value>
+        <value name="namedText">false</value>
+        <value name="leadingText">false</value>
+        <value name="rec_ref">wmavalara.avaTax_v15_4.tax.doctypes:docTypeRef_tns_ArrayOfMessage</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:DocId</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:DocType</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://avatax.avalara.com/services</value>
+              <value name="ncName">DocumentType</value>
+            </record>
+          </array>
+          <value name="schemaDomain">com.softwareag.cloudstreams.avalara.avaTax_v15.4#TaxSvc</value>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:DocCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:DocDate</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">date</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:DocStatus</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://avatax.avalara.com/services</value>
+              <value name="ncName">DocStatus</value>
+            </record>
+          </array>
+          <value name="schemaDomain">com.softwareag.cloudstreams.avalara.avaTax_v15.4#TaxSvc</value>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:Reconciled</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">boolean</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:Timestamp</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">dateTime</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TotalAmount</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">decimal</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TotalDiscount</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">decimal</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TotalExemption</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">decimal</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TotalTaxable</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">decimal</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TotalTax</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">decimal</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TotalTaxCalculated</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">decimal</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:HashCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">int</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TaxLines</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="modelType">1</value>
+        <value name="preserveText">false</value>
+        <value name="namedText">false</value>
+        <value name="leadingText">false</value>
+        <value name="rec_ref">wmavalara.avaTax_v15_4.tax.doctypes:docTypeRef_tns_ArrayOfTaxLine</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TaxAddresses</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="modelType">1</value>
+        <value name="preserveText">false</value>
+        <value name="namedText">false</value>
+        <value name="leadingText">false</value>
+        <value name="rec_ref">wmavalara.avaTax_v15_4.tax.doctypes:docTypeRef_tns_ArrayOfTaxAddress</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:Locked</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">boolean</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:AdjustmentReason</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">int</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:AdjustmentDescription</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:Version</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">int</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TaxDate</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">date</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">1</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:TaxSummary</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="modelType">1</value>
+        <value name="preserveText">false</value>
+        <value name="namedText">false</value>
+        <value name="leadingText">false</value>
+        <value name="rec_ref">wmavalara.avaTax_v15_4.tax.doctypes:docTypeRef_tns_ArrayOfTaxDetail</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:VolatileTaxRates</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">boolean</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">http://avatax.avalara.com/services</value>
+        <value name="form_qualified">true</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">*doctype</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>wmavalara.avaTax_v15_4.tax.doctypes:docTypeRef_tns_GetTaxResult</value>
+          <value>wmavalara.avaTax_v15_4.tax.doctypes:docTypeRef_tns_AdjustTaxResult</value>
+        </array>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="any_mode_uris"></value>
+      </record>
+    </array>
+    <record name="schemaType" javaclass="com.wm.util.Values">
+      <value name="xmlns">http://avatax.avalara.com/services</value>
+      <value name="ncName">GetTaxResult</value>
+    </record>
+    <value name="schemaDomain">com.softwareag.cloudstreams.avalara.avaTax_v15.4#TaxSvc</value>
+    <value name="schemaRegistered">true</value>
+    <value name="docTypeDomain">c85317d0bbeb16c58472ab03b031f603</value>
+    <value name="modifiable">true</value>
+    <value name="modelType">1</value>
+    <value name="preserveText">false</value>
+    <value name="namedText">false</value>
+    <value name="leadingText">false</value>
+  </record>
+</Values>

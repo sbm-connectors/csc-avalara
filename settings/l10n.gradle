@@ -1,0 +1,10 @@
+/*
+ * Common configurations for L10N projects
+ */
+//apply plugin: 'bas-l10n'
+//l10n {
+//	databaseUrl = ...
+//	product = ...
+//	bundleResourceId = ...
+//	locales = 'noLocale'
+//}

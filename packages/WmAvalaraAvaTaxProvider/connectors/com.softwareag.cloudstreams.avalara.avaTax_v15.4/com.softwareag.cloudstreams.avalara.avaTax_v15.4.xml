@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<soap-connector xmlns="http://www.softwareag.com/cloudstreams/metadata/handler/model" id="com.softwareag.cloudstreams.avalara.avaTax_v15.4" version="15.4" group="Avalara" name="Avalara AvaTax" displayName="Avalara AvaTax">
+    <connections>
+        <connection type="sagcloud" name="Connection" displayName="Connection">
+            <groups>
+                <group type="connection" name="connection" displayName="Connection">
+                    <description>Define the required connection configurations to initiate communication with the SaaS provider.</description>
+                    <fields>
+                        <field defaultValue="https://development.avalara.net/" name="cn.providerUrl" displayName="Server URL"/>
+                    </fields>
+                </group>
+				
+                <group type="credentials" displayName="Credentials" name="Credentials">
+					<fields>
+						<field name="cr.username" isRequired="true"/>
+						<field name="cr.password" isRequired="true"/>
+                         <field defaultValue="basic" name="cr.authSchemeType" isRequired="true"/>                                   
+					</fields>
+				</group>
+				<group type="custom" name="custom" displayName="Custom">
+                    <description>Define any custom configurations specific to the SaaS provider.</description>
+                    <fields>
+                        <field defaultValue="" name="cx.clientname" displayName="clientname" isRequired="true"/>
+                    </fields>
+                </group>		
+            </groups>
+            <start/>
+            <stop/>
+        </connection>
+    </connections>
+    <services>
+	<service xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SOAPServiceType" wsdlLocation="TaxSvc.wsdl" name="TaxSvc" displayName="Tax">
+            <documentModel packageName="WmAvalaraAvaTaxProvider" nsName="wmavalara.avaTax_v15_4.tax.doctypes" useInlineModel="false"/>
+            <operations>
+                <mappings>
+                    <map isRequired="true" isFixed="true" context="IN" name="updateEndpointURL" displayName="updateEndpointURL">
+                        <description>Update the endpoint URL</description>
+                        <source type="LITERAL">Tax/TaxSvc.asmx/altsec</source>
+                        <target type="IDATA">cn.serviceContext</target>
+                    </map>
+                </mappings>
+				
+				<operation type="SIMPLE" name="GetTax" displayName="Get Tax">
+                    <description>Calculates taxes on a document such as a sales order, sales invoice, purchase order, purchase invoice, or credit memo</description>
+					<mappings>
+                        <map context="IN" isRequired="true" isFixed="true" displayName="username_map" name="username_map">
+                            <description>Username input</description>
+                            <source type="IDATA">cr.username</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:GetTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Username</xpath>
+                            </target>
+                    </map>
+					<map context="IN" isRequired="true" isFixed="true" displayName="password_map" name="password_map">
+                            <description>Password input</description>
+                            <source type="IDATA">cr.password</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:GetTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Password</xpath>
+                            </target>
+                    </map>	
+					<map context="IN" isRequired="true" isFixed="true" displayName="clientname_map" name="clientname_map">
+                            <description>ClientName input</description>
+                            <source type="IDATA">cx.clientname</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:GetTaxProfile">
+							<xpath>tns:Profile/tns:Client</xpath>
+                            </target>
+                    </map>
+											
+					</mappings>	 
+                </operation>
+                <operation type="SIMPLE" name="GetTaxHistory" displayName="Get Tax History">
+                    <description>Retrieves details for previously saved documents</description>
+					<mappings>
+                        <map context="IN" isRequired="true" isFixed="true" displayName="username_map" name="username_map">
+                            <description>Username input</description>
+                            <source type="IDATA">cr.username</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:GetTaxHistorySecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Username</xpath>
+                            </target>
+                    </map>
+					<map context="IN" isRequired="true" isFixed="true" displayName="password_map" name="password_map">
+                            <description>Password input</description>
+                            <source type="IDATA">cr.password</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:GetTaxHistorySecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Password</xpath>
+                            </target>
+                    </map>	
+					<map context="IN" isRequired="true" isFixed="true" displayName="clientname_map" name="clientname_map">
+                            <description>ClientName input</description>
+                            <source type="IDATA">cx.clientname</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:GetTaxHistoryProfile">
+							<xpath>tns:Profile/tns:Client</xpath>
+                            </target>
+                    </map>
+											
+					</mappings>	 
+                </operation>
+                <operation type="SIMPLE" name="PostTax" displayName="Post Tax">
+                    <description>Changes the state to Posted for the documents saved to the AvaTax database via SalesInvoice, ReturnInvoice or PurchaseInvoice methods</description>
+					
+					<mappings>
+                        <map context="IN" isRequired="true" isFixed="true" displayName="username_map" name="username_map">
+                            <description>Username input</description>
+                            <source type="IDATA">cr.username</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:PostTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Username</xpath>
+                            </target>
+                    </map>
+					<map context="IN" isRequired="true" isFixed="true" displayName="password_map" name="password_map">
+                            <description>Password input</description>
+                            <source type="IDATA">cr.password</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:PostTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Password</xpath>
+                            </target>
+                    </map>	
+					<map context="IN" isRequired="true" isFixed="true" displayName="clientname_map" name="clientname_map">
+                            <description>ClientName input</description>
+                            <source type="IDATA">cx.clientname</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:PostTaxProfile">
+							<xpath>tns:Profile/tns:Client</xpath>
+                            </target>
+                    </map>
+											
+					</mappings>	 
+                </operation>
+                <operation type="SIMPLE" name="CommitTax" displayName="Commit Tax">
+                    <description>Changes the state of document to committed</description>
+					<mappings>
+                        <map context="IN" isRequired="true" isFixed="true" displayName="username_map" name="username_map">
+                            <description>Username input</description>
+                            <source type="IDATA">cr.username</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:CommitTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Username</xpath>
+                            </target>
+                    </map>
+					<map context="IN" isRequired="true" isFixed="true" displayName="password_map" name="password_map">
+                            <description>Password input</description>
+                            <source type="IDATA">cr.password</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:CommitTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Password</xpath>
+                            </target>
+                    </map>	
+					<map context="IN" isRequired="true" isFixed="true" displayName="clientname_map" name="clientname_map">
+                            <description>ClientName input</description>
+                            <source type="IDATA">cx.clientname</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:CommitTaxProfile">
+							<xpath>tns:Profile/tns:Client</xpath>
+                            </target>
+                    </map>
+											
+					</mappings>	 
+					
+                </operation>
+                <operation type="SIMPLE" name="CancelTax" displayName="Cancel Tax">
+                    <description>Voids or deletes an existing transaction record from the AvaTax system</description>
+					<mappings>
+                        <map context="IN" isRequired="true" isFixed="true" displayName="username_map" name="username_map">
+                            <description>Username input</description>
+                            <source type="IDATA">cr.username</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:CancelTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Username</xpath>
+                            </target>
+                    </map>
+					<map context="IN" isRequired="true" isFixed="true" displayName="password_map" name="password_map">
+                            <description>Password input</description>
+                            <source type="IDATA">cr.password</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:CancelTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Password</xpath>
+                            </target>
+                    </map>	
+					<map context="IN" isRequired="true" isFixed="true" displayName="clientname_map" name="clientname_map">
+                            <description>ClientName input</description>
+                            <source type="IDATA">cx.clientname</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:CancelTaxProfile">
+							<xpath>tns:Profile/tns:Client</xpath>
+                            </target>
+                    </map>
+											
+					</mappings>	 
+                </operation>
+                <operation type="SIMPLE" name="ReconcileTaxHistory" displayName="Reconcile Tax History" isHidden="true">
+                    <description>It can be used to retrieve ranges of document data</description>
+					<mappings>
+                        <map context="IN" isRequired="true" isFixed="true" displayName="username_map" name="username_map">
+                            <description>Username input</description>
+                            <source type="IDATA">cr.username</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:ReconcileTaxHistorySecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Username</xpath>
+                            </target>
+                    </map>
+					<map context="IN" isRequired="true" isFixed="true" displayName="password_map" name="password_map">
+                            <description>Password input</description>
+                            <source type="IDATA">cr.password</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:ReconcileTaxHistorySecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Password</xpath>
+                            </target>
+                    </map>	
+					<map context="IN" isRequired="true" isFixed="true" displayName="clientname_map" name="clientname_map">
+                            <description>ClientName input</description>
+                            <source type="IDATA">cx.clientname</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:ReconcileTaxHistoryProfile">
+							<xpath>tns:Profile/tns:Client</xpath>
+                            </target>
+                    </map>
+											
+					</mappings>	 
+                </operation>     
+                <operation type="SIMPLE" name="AdjustTax" displayName="Adjust Tax">
+                    <description>Allows you to make adjustments to existing committed documents</description>
+					<mappings>
+                        <map context="IN" isRequired="true" isFixed="true" displayName="username_map" name="username_map">
+                            <description>Username input</description>
+                            <source type="IDATA">cr.username</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:AdjustTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Username</xpath>
+                            </target>
+                    </map>
+					<map context="IN" isRequired="true" isFixed="true" displayName="password_map" name="password_map">
+                            <description>Password input</description>
+                            <source type="IDATA">cr.password</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:AdjustTaxSecurity">
+							<xpath>tns:Security/tns:UsernameToken/tns:Password</xpath>
+                            </target>
+                    </map>	
+					<map context="IN" isRequired="true" isFixed="true" displayName="clientname_map" name="clientname_map">
+                            <description>ClientName input</description>
+                            <source type="IDATA">cx.clientname</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.tax.doctypes:AdjustTaxProfile">
+							<xpath>tns:Profile/tns:Client</xpath>
+                            </target>
+                    </map>
+											
+					</mappings>	 
+                </operation>      
+                <operation type="SIMPLE" name="Ping" displayName="Ping" isHidden="true">
+                    <description>Allows one to check the availability of Avalara web service at any given time</description>
+                </operation>
+                <operation type="SIMPLE" name="IsAuthorized" displayName="Is Authorized" isHidden="true">
+                    <description>Allows one to send a user&apos;s credentials along with a list of methods to check which methods the user is authorized for</description>
+                </operation>
+                
+            </operations>
+        </service>
+		
+        <service xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SOAPServiceType" wsdlLocation="AddressSvc.wsdl" name="AddressSvc" displayName="Address">
+            <documentModel packageName="WmAvalaraAvaTaxProvider" nsName="wmavalara.avaTax_v15_4.address.doctypes" useInlineModel="false"/>
+            <operations>
+                <mappings>
+                    <map isRequired="true" isFixed="true" context="IN" name="updateEndpointURL" displayName="updateEndpointURL">
+                        <description>Update the endpoint URL</description>
+                        <source type="LITERAL">address/addresssvc.asmx/altsec</source>
+                        <target type="IDATA">cn.serviceContext</target>
+                    </map>
+                </mappings>
+				
+                <operation type="SIMPLE" isHidden="false" name="Validate" displayName="Validate Address">
+                    <description>Normalizes a single US or Canadian address, providing a non-ambiguous address match.</description>
+					<mappings>
+                        <map isRequired="true" isFixed="true" context="IN" name="ValidateProfileUsername" displayName="ValidateProfileUsername">
+                            <source type="IDATA">cr.username</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.address.doctypes:ValidateSecurity">
+								<xpath>tns:Security/tns:UsernameToken/tns:Username</xpath>
+                            </target>
+                        </map>
+                        <map isRequired="true" isFixed="true" context="IN" name="ValidateProfilePassword" displayName="ValidateProfilePassword">
+                            <source type="IDATA">cr.password</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.address.doctypes:ValidateSecurity">
+								<xpath>tns:Security/tns:UsernameToken/tns:Password</xpath>
+                            </target>
+                        </map>
+						<map context="IN" isRequired="true" isFixed="true" displayName="clientname_map" name="clientname_map">
+                            <description>ClientName input</description>
+                            <source type="IDATA">cx.clientname</source>
+                            <target type="XPATH" documentRef="wmavalara.avaTax_v15_4.address.doctypes:ValidateProfile">
+							<xpath>tns:Profile/tns:Client</xpath>
+                            </target>
+                    </map>
+                    </mappings>
+                </operation>
+				
+				<operation type="SIMPLE"  name="Ping" displayName="Ping" isHidden="true">
+                    <description>Allows one to check the availability of Avalara web service at any given time</description>
+                </operation>
+                <operation type="SIMPLE"  name="IsAuthorized" displayName="Is Authorized" isHidden="true">
+                    <description>Allows one to send a user's credentials along with a list of methods to check which methods that user is authorized to use</description>
+                </operation>
+            </operations>
+        </service>	       
+    </services>
+</soap-connector>

@@ -1,0 +1,130 @@
+com.softwareag.ext.org.apache.camel.core.osgi=com.softwareag.eda
+#No milestone versions in sab
+com.softwareag.wpt
+com.softwareag.ext.org.junit=com.softwareag.ac.equinox.platform
+com.softwareag.ext.org.codehaus.jettison=com.softwareag.tps
+#Exclude it
+#com.softwareag.sample.bas.osgi
+com.softwareag.plm.spm.plugins
+com.softwareag.plm.spm
+#This build is obsolete
+#EventGenerator_release
+com.softwareag.ext.org.eclipse.equinox.core.simpleconfigurator.manipulator=com.softwareag.ac.equinox.platform
+#Currently only in bas
+com.softwareag.ext.org.apache.camel.sql=com.softwareag.eda
+com.softwareag.ext.org.apache.camel.http4=com.softwareag.eda
+com.softwareag.ext.org.apache.camel.http=com.softwareag.eda
+com.softwareag.ext.org.apache.camel.spring=com.softwareag.eda
+com.softwareag.ext.org.apache.santuario.xmlsec=com.softwareag.tps
+event_generator_v9-5-1_PDF_release
+#this won't be released
+#com.softwareag.plm.spm.bas
+com.softwareag.ext.org.apache.ws.security.wss4j
+com.softwareag.cf
+com.softwareag.plm.sum
+#Discoped for WPE-2787
+#com.softwareag.mom.is.pe
+com.softwareag.equinox.p2.publisher
+com.softwareag.sc.utils
+com.softwareag.web.caf.mws
+com.softwareag.ext.javax.xml.stream.stax.api=com.softwareag.ac.equinox.platform
+com.softwareag.bam
+com.softwareag.plm.sd
+com.softwareag.plm.cce.web.cce=com.softwareag.plm.cce
+com.softwareag.db.dcc
+com.softwareag.mom.is
+com.softwareag.ext.org.apache.camel.jms=com.softwareag.eda
+com.softwareag.cmp
+com.softwareag.centrasite=com.softwareag.centrasite.legacy
+com.softwareag.centrasite.legacy
+com.softwareag.ext.org.owasp.encoder=com.softwareag.sec
+com.softwareag.plm.cce
+com.softwareag.plm.cc=com.softwareag.plm.spm
+com.softwareag.plm.sd.platform=com.softwareag.plm.sd.wis
+com.softwareag.mom.broker
+com.softwareag.mom.nirvana.tools
+com.softwareag.mom.nirvana
+com.softwareag.ext.org.eclipse.equinox.core.launcher=com.softwareag.ac.equinox.platform
+#event_generator_v9-0-1_PDF_milestone
+#No artifacts
+#event_generator_PDF_milestone
+com.softwareag.ac.equinox.platform
+com.softwareag.aa.infradc
+#We'll not release BAS
+#com.softwareag.bas
+#Doesn't have milestones
+com.softwareag.dep
+com.softwareag.bam.shared=com.softwareag.bam
+#Doesn't have milestones - WWG will be on an off-cycle release starting in Nov/Dec. 
+com.softwareag.ide.eclipse.md
+com.softwareag.plm.sd.wis
+com.softwareag.plm.sd.itools=com.softwareag.plm.sd.wis
+com.softwareag.bpm.eform=com.softwareag.sc.wsi.install
+#event_generator_v9-5-1_PDF_milestone
+com.softwareag.eda
+com.softwareag.plm.deployer
+com.softwareag.sec=com.softwareag.ac.equinox.platform
+com.softwareag.sc.lwq
+com.softwareag.ext.org.apache.neethi
+com.softwareag.tps
+com.softwareag.entirex
+#Still doesn't have milestone
+#com.softwareag.sc.cf
+#com.softwareag.plm.sd.designer=com.softwareag.ac.equinox.platform
+com.softwareag.plm.sd.designer=com.softwareag.plm.sd.wis
+com.softwareag.bpm.rules
+com.softwareag.ext.org.eclipse.equinox.p2.director.app=com.softwareag.ac.equinox.platform
+com.softwareag.ext.net.sf.wsdl4j=com.softwareag.tps
+com.softwareag.pulse
+com.softwareag.ac.equinox.spring.board
+com.softwareag.b2b.tn
+#event_generator_PDF_release
+com.softwareag.ide.eclipse.bpm
+com.softwareag.doc.ide.eclipse.designer
+com.softwareag.ide.eclipse.mom
+com.softwareag.ext.org.codehaus.castor.all=com.softwareag.eda
+com.softwareag.g11n.lfw
+com.softwareag.coins
+#Doesn't exists
+#com.softwareag.thub.cp
+com.softwareag.g11n=com.softwareag.ac.equinox.platform
+com.softwareag.ext.org.eclipse.gemini.web=com.softwareag.ac.equinox.platform
+com.softwareag.ext.org.eclipse.virgo.util=com.softwareag.ac.equinox.platform
+#com.softwareag.ext.javax.xml.bind.jaxb.api=com.softwareag.tps
+com.softwareag.sc=com.softwareag.sc.wsi.install
+#######################################
+#Newly added
+com.softwareag.ac.equinox.platform.migration.tool=com.softwareag.ac.equinox.platform
+com.softwareag.ac.tomcat
+#petod temporary disable
+#com.softwareag.cbi.il
+com.softwareag.cfs
+com.softwareag.eda.estore
+com.softwareag.ext.org.apache.camel.core=com.softwareag.eda
+com.softwareag.ext.org.json
+com.softwareag.ext.pde.test.utils
+com.softwareag.lbs.locate
+#petod test build of SPM/CCE 
+#com.softwareag.plm.cc.dev.cc
+#com.softwareag.plm.cce.poc.cce
+#com.softwareag.plm.cce.web.poc.cce
+#com.softwareag.plm.spm.poc.spm
+com.softwareag.plm.sum.cc=com.softwareag.plm.sd.wis
+#petod temporary disable
+#com.softwareag.rtm
+com.softwareag.sc.wsi.install
+#petod temporary disable
+#com.softwareag.tbd.estore
+#event-driven_architecture_help_Eclipse
+#event_generator_PDF_milestone
+#event_generator_PDF_release
+#event_generator_v9-0-1_PDF_milestone
+#event_generator_v9-5-1_PDF_milestone
+#event_generator_v9-5-1_PDF_release
+#event_generator_v9-6_PDF_milestone
+#event_generator_v9-6_PDF_release
+#mobile_development_help_Eclipse
+#mobile_development_help_Eclipse_milestone
+#mobile_development_help_Eclipse_release
+com.softwareag.db.drivers
+com.softwareag.mom.is.cs.shared

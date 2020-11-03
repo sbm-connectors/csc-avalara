@@ -1,0 +1,52 @@
+buildscript {
+	repositories {
+		ivy {
+			name 'build-mile'
+			url 'http://bas.eur.ad.sag:8081/artifactory/build-milestone'
+			layout 'maven'
+		}
+	}
+}
+
+description = 'Software AG CloudStreams Providers BAS build script'
+/*
+ * Root-project only configuration
+ */
+apply from: 'settings/dependencies.gradle'
+apply from: 'settings/groups.gradle'
+apply from: 'settings/ac.gradle'
+apply from: 'settings/ide-eclipse.gradle'
+apply from: 'settings/ide-idea.gradle'
+/*
+ * Common configuration for all projects
+ */
+allprojects {
+	defaultTasks 'build'
+	apply plugin: 'project-report'
+}
+subprojects {
+    project.afterEvaluate {
+        project.tasks.build.dependsOn 'pkg'
+    }
+}
+/* 
+ * Build requirements
+ */
+buildscript {
+	ext {
+		bas = [
+			version : 'latest.milestone',
+		]
+	}
+	dependencies {
+		classpath (
+			"com.softwareag.bas:bas-plugins-core:$bas.version",
+			"com.softwareag.bas:bas-plugins-ide:$bas.version",
+			"com.softwareag.bas:bas-plugins-is:$bas.version",
+			"com.softwareag.bas:bas-plugins-cc:$bas.version",
+			"com.softwareag.bas:bas-plugins-coins:$bas.version",
+			"com.softwareag.bas:bas-plugins-l10n:$bas.version",
+            "com.softwareag.bas:bas-plugins-svn:$bas.version",
+		)
+	}
+}

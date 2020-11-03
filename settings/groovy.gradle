@@ -1,0 +1,15 @@
+/*
+ * Common configuration for Groovy projects
+ */
+apply plugin: 'bas-groovy'
+
+// Setting compiler arguments
+tasks.withType(GroovyCompile) {
+    options.encoding = 'utf-8'
+    options.compilerArgs = ['-implicit:none', '-Xlint:-options', '-Xlint:unchecked']
+}
+
+// Always needed Groovy dependencies
+dependencies {
+	groovy localGroovy()
+}

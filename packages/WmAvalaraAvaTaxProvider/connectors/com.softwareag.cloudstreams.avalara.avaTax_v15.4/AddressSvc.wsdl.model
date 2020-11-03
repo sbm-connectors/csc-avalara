@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <array name="services" type="record" depth="1">
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <record name="serviceName" javaclass="com.wm.data.ISMemDataImpl">
+          <value name="xmlns">http://avatax.avalara.com/services</value>
+          <value name="ncName">AddressSvc</value>
+        </record>
+        <array name="ports" type="record" depth="1">
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="name">AddressSvcAltSecSoap</value>
+            <value name="addressLocation">https://development.avalara.net/address/addresssvc.asmx/altsec</value>
+            <record name="binding" javaclass="com.wm.data.ISMemDataImpl">
+              <record name="bindingName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://avatax.avalara.com/services</value>
+                <value name="ncName">AddressSvcAltSecSoap</value>
+              </record>
+              <record name="portTypeName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://avatax.avalara.com/services</value>
+                <value name="ncName">AddressSvcAltSecSoap</value>
+              </record>
+              <array name="operations" type="record" depth="1">
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">Validate</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/Validate</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_Validate_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:ValidateSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:ValidateProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_Validate_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">Ping</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/Ping</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_Ping_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:PingSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:PingProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_Ping_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">IsAuthorized</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/IsAuthorized</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_IsAuthorized_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:IsAuthorizedSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:IsAuthorizedProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_IsAuthorized_Output</value>
+                  </record>
+                </record>
+              </array>
+            </record>
+          </record>
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="name">AddressSvcAltSecSoap12</value>
+            <value name="addressLocation">https://development.avalara.net/address/addresssvc.asmx/altsec</value>
+            <record name="binding" javaclass="com.wm.data.ISMemDataImpl">
+              <record name="bindingName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://avatax.avalara.com/services</value>
+                <value name="ncName">AddressSvcAltSecSoap12</value>
+              </record>
+              <record name="portTypeName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://avatax.avalara.com/services</value>
+                <value name="ncName">AddressSvcAltSecSoap</value>
+              </record>
+              <array name="operations" type="record" depth="1">
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">Validate</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/Validate</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_Validate_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:ValidateSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:ValidateProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_Validate_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">Ping</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/Ping</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_Ping_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:PingSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:PingProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_Ping_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">IsAuthorized</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/IsAuthorized</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_IsAuthorized_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:IsAuthorizedSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.address.doctypes:IsAuthorizedProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.address.doctypes:AddressSvcAltSecSoap_IsAuthorized_Output</value>
+                  </record>
+                </record>
+              </array>
+            </record>
+          </record>
+        </array>
+      </record>
+    </array>
+  </record>
+</IDataXMLCoder>

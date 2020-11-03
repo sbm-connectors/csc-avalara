@@ -1,0 +1,69 @@
+apply from: "$project.rootDir/settings/is.gradle"
+apply from: "$project.rootDir/settings/java-base.gradle"
+
+label = "$project.rootProject.name $project.name IS package"
+description = project.label
+
+project.pkgDirName       = '../..'
+project.manifestDirName  = '../..'
+
+sourceSets {
+	main {
+		java {
+			srcDirs "${projectDir}/code/source"
+		}
+		resources {
+			srcDirs "${projectDir}/code/source"
+		}
+	}
+}
+
+// First do some clean-up (this is required for local builds, since there may be remnants after a traditional ant based build.xml execution)
+task cleanupSource(type: Delete) {
+    delete "${projectDir}" + File.separator + "code" + File.separator + "classes"
+}
+
+compileJava {
+    dependsOn cleanupSource
+}
+
+pkg {
+//    baseName = "WmAvalaraAvaTaxProvider"
+    // don't override manifest
+    //manifest.values(
+			//'name': project.label,
+			//'description': project.label,
+			//'jvm_version': targetCompatibility.toString()
+			//)
+    // include everything except below
+    exclude 'build/**', '**/*.gradle', '**/*.classpath', '**/*.project', '**/*.java', '**/*.frag', '**/*.bak', 'code/source', 'classes'
+    sources.exclude '**/test/**'
+    classpath = project.sourceSets.main.output.classesDir
+}
+
+// Disable few unnecessary tasks coming from bas-java and bas-is-pkg plugins
+
+// We don't need jars for this build (code/jars)
+jar.enabled = false;
+configurations.archives.artifacts.removeAll { true }
+configurations.runtime.artifacts.removeAll { true }
+configurations.staticCompile.artifacts.removeAll { true }
+configurations.staticRuntime.artifacts.removeAll { true }
+
+// We don't need static jars either (code/jars/static, disabling all tasks related to static compilation)
+compileStaticJava.enabled = false;
+staticClasses.enabled = false;
+jarStatic.enabled = false;
+processStaticResources.enabled = false;
+
+dependencies {
+	providedCompile(
+		'com.softwareag.mom.is:is-client:latest.milestone',
+        'com.softwareag.mom.is:is-server:latest.milestone',
+	)
+	compile (
+		'org.apache.commons:commons-collections:3.1.0'
+	)
+	testCompile group: 'org.junit', name: 'junit', version: '4.10.0'
+}
+

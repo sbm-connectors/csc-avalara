@@ -1,0 +1,4 @@
+/*
+ * Common COINS configurations
+ */
+apply plugin: 'bas-coins'

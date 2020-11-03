@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <array name="services" type="record" depth="1">
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <record name="serviceName" javaclass="com.wm.data.ISMemDataImpl">
+          <value name="xmlns">http://avatax.avalara.com/services</value>
+          <value name="ncName">TaxSvc</value>
+        </record>
+        <array name="ports" type="record" depth="1">
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="name">TaxSvcAltSecSoap</value>
+            <value name="addressLocation">https://development.avalara.net/Tax/TaxSvc.asmx/altsec</value>
+            <record name="binding" javaclass="com.wm.data.ISMemDataImpl">
+              <record name="bindingName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://avatax.avalara.com/services</value>
+                <value name="ncName">TaxSvcAltSecSoap</value>
+              </record>
+              <record name="portTypeName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://avatax.avalara.com/services</value>
+                <value name="ncName">TaxSvcAltSecSoap</value>
+              </record>
+              <array name="operations" type="record" depth="1">
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">GetTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/GetTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_GetTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:GetTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:GetTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_GetTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">GetTaxHistory</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/GetTaxHistory</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_GetTaxHistory_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:GetTaxHistorySecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:GetTaxHistoryProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_GetTaxHistory_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">PostTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/PostTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_PostTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:PostTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:PostTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_PostTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">CommitTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/CommitTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_CommitTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CommitTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CommitTaxAuditMessage</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CommitTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_CommitTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">CancelTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/CancelTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_CancelTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CancelTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CancelTaxAuditMessage</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CancelTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_CancelTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">ReconcileTaxHistory</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/ReconcileTaxHistory</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_ReconcileTaxHistory_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ReconcileTaxHistorySecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ReconcileTaxHistoryProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_ReconcileTaxHistory_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">AdjustTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/AdjustTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_AdjustTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:AdjustTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:AdjustTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_AdjustTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">ApplyPayment</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/ApplyPayment</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_ApplyPayment_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ApplyPaymentSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ApplyPaymentAuditMessage</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ApplyPaymentProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_ApplyPayment_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">Ping</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/Ping</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_Ping_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:PingSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:PingProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_Ping_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">IsAuthorized</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/IsAuthorized</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_IsAuthorized_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:IsAuthorizedSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:IsAuthorizedProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_IsAuthorized_Output</value>
+                  </record>
+                </record>
+              </array>
+            </record>
+          </record>
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="name">TaxSvcAltSecSoap12</value>
+            <value name="addressLocation">https://development.avalara.net/Tax/TaxSvc.asmx/altsec</value>
+            <record name="binding" javaclass="com.wm.data.ISMemDataImpl">
+              <record name="bindingName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://avatax.avalara.com/services</value>
+                <value name="ncName">TaxSvcAltSecSoap12</value>
+              </record>
+              <record name="portTypeName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://avatax.avalara.com/services</value>
+                <value name="ncName">TaxSvcAltSecSoap</value>
+              </record>
+              <array name="operations" type="record" depth="1">
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">GetTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/GetTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_GetTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:GetTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:GetTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_GetTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">GetTaxHistory</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/GetTaxHistory</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_GetTaxHistory_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:GetTaxHistorySecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:GetTaxHistoryProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_GetTaxHistory_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">PostTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/PostTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_PostTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:PostTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:PostTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_PostTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">CommitTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/CommitTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_CommitTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CommitTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CommitTaxAuditMessage</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CommitTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_CommitTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">CancelTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/CancelTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_CancelTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CancelTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CancelTaxAuditMessage</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:CancelTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_CancelTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">ReconcileTaxHistory</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/ReconcileTaxHistory</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_ReconcileTaxHistory_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ReconcileTaxHistorySecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ReconcileTaxHistoryProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_ReconcileTaxHistory_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">AdjustTax</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/AdjustTax</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_AdjustTax_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:AdjustTaxSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:AdjustTaxProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_AdjustTax_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">ApplyPayment</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/ApplyPayment</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_ApplyPayment_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ApplyPaymentSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ApplyPaymentAuditMessage</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:ApplyPaymentProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_ApplyPayment_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">Ping</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/Ping</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_Ping_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:PingSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:PingProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_Ping_Output</value>
+                  </record>
+                </record>
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">IsAuthorized</value>
+                  <value name="soapAction">http://avatax.avalara.com/services/IsAuthorized</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_IsAuthorized_Input</value>
+                    <array name="headers" type="value" depth="1">
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:IsAuthorizedSecurity</value>
+                      <value>wmavalara.avaTax_v15_4.tax.doctypes:IsAuthorizedProfile</value>
+                    </array>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">wmavalara.avaTax_v15_4.tax.doctypes:TaxSvcAltSecSoap_IsAuthorized_Output</value>
+                  </record>
+                </record>
+              </array>
+            </record>
+          </record>
+        </array>
+      </record>
+    </array>
+  </record>
+</IDataXMLCoder>

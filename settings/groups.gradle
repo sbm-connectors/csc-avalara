@@ -1,0 +1,51 @@
+/*
+ * Software AG group ids :: See https://iwiki.eur.ad.sag/x/lYKLAQ
+ */
+configure(allprojects - isProjects() - spmProjects() - cceProjects() - cmpProjects() - warProjects() - eclipseProjects()) {
+	group = "com.softwareag.mom.is.cs.providers.${project.rootProject.name}"
+}
+// Common configurations for IS projects
+configure(isProjects()) {
+	group = "com.softwareag.mom.is.cs.providers.${project.rootProject.name}"
+}
+// Common configurations for WAR projects
+configure(warProjects()) {
+	group = "com.softwareag.web.mws.${project.rootProject.name}"
+}
+// Common configurations for SPM projects
+configure(spmProjects()) {
+	group = "com.softwareag.plm.spm.${project.rootProject.name}"
+}
+// Common configurations for CCE projects
+configure(cceProjects()) {
+	group = "com.softwareag.plm.cce.${project.rootProject.name}"
+}
+// Common configurations for CMP projects
+configure(cmpProjects()) {
+	group = "com.softwareag.cmp.${project.rootProject.name}"
+}
+// Common configurations for Eclipse projects
+configure(eclipseProjects()) {
+	group = "com.softwareag.ide.eclipse.${project.rootProject.name}"
+}
+/*
+ * Helper methods
+ */
+def isProjects() {
+	subprojects.findAll { project -> project.name.startsWith('is') }
+}
+def warProjects() {
+	subprojects.findAll { project -> project.name.startsWith('mws') }
+}
+def spmProjects() {
+	subprojects.findAll { project -> project.name.startsWith('spm') }
+}
+def cceProjects() {
+	subprojects.findAll { project -> project.name.startsWith('cce') }
+}
+def cmpProjects() {
+	subprojects.findAll { project -> project.name.startsWith('cmp') }
+}
+def eclipseProjects() {
+	subprojects.findAll { project -> project.name.startsWith("$rootProject.name-ui") }
+}

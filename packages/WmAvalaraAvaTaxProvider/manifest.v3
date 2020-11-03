@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+	<value name="enabled">yes</value>
+	<value name="name">WmAvalaraAvaTaxProvider</value>
+	<value name="system_package">yes</value>
+	<value name="version">9.8.0.0.1</value>
+	<value name="build">1</value>
+	<null name="listACL"/>
+	<value name="webappLoad">yes</value>
+	<value name="description">webMethods CloudStreams Provider for Avalara AvaTax</value>
+	<value name="publisher">Software AG</value>
+	<record name="startup_services" javaclass="com.wm.util.Values">
+		<null name="wm.cloudstreams.avalara.avaTax.plm:registerProvider"/>		 
+	</record>
+	<record name="shutdown_services" javaclass="com.wm.util.Values">
+		<null name="wm.cloudstreams.avalara.avaTax.plm:unregisterProvider"/>		 		
+	</record>
+	<record name="requires" javaclass="com.wm.util.Values">
+		<value name="WmCloudStreams">9.8</value>
+	</record>
+</Values>

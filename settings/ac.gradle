@@ -1,0 +1,20 @@
+/*
+ * Target environments
+ */
+apply plugin: 'bas-ac-cc'
+ccAc {
+	profiles {
+		spm {
+			//installerProductId = 'tbd'
+			consolePort = '9995'  // Setting the SPM OSGi console port. Default is 9999
+			httpPort = '8093' // Setting the SPM HTTP port. Default is 8092
+		}
+		cce {
+			consolePort = '9996' // Setting the CCE OSGi console port. Default is 9998
+			httpPort = '8091' // Setting the CCE HTTP port. Default is 8090
+		}
+	}
+}
+equinoxAcLaunchConfigSPM { // Define dependency to the task responsible for the SPM plugin feature provisioning
+	dependsOn ":features:spm-$project.rootProject.name:equinoxAcInstallSPM"
+}

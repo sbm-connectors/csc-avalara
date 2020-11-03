@@ -1,0 +1,12 @@
+/*
+ * Common configuration for IS projects
+ */
+apply plugin: 'bas-is-pkg'
+apply from: "$project.rootDir/settings/java-base.gradle"
+apply from: "$project.rootDir/settings/coins.gradle"
+
+// Generating Eclipse workspace files for JDT projects
+apply from: "$project.rootDir/settings/ide-eclipse.gradle"
+
+// Generating IDEA workspace files
+apply from: "$project.rootDir/settings/ide-idea.gradle"
